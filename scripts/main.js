@@ -17,10 +17,14 @@ const ekranlink = document.querySelector('.ekran');
 
 //const primlink = document.querySelector('input[name="primer"]');
 
+let a;
 
 const enternum = (butlink) => {
 butlink.addEventListener('click', (ev) => {
-    ekranlink.innerHTML = ev.target.innerHTML;
+    a = ev.target.innerHTML;
+    if((a>=0) && (a<=9)) {
+    ekranlink.innerHTML = Number(a);
+    } else {ekranlink.innerHTML = a;}
 })
 }
 
@@ -34,8 +38,18 @@ enternum(butlink7);
 enternum(butlink8);
 enternum(butlink9);
 enternum(butlink0);
+
 enternum(butlinkpl);
 enternum(butlinkeq);
+
+/*
+const sum = () => {
+    enternum(butlinkpl);
+}
+
+enternum(butlinkeq);
+
+*/
 
 /*
 
